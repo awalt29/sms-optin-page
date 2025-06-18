@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMS Opt-In | Weekend Planner</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5em;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    input[type="tel"], button {
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 8px;
+      width: 100%;
+    }
+    .consent {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sign Up for Weekend Planner Texts</h1>
+  <p>
+    Get SMS updates from our Weekend Planner app when your friends are available
+    and it’s time to finalize plans.
+  </p>
+
+  <form>
+    <label for="phone">Enter your mobile number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
+
+    <div class="consent">
+      <input type="checkbox" id="consent" name="consent" required />
+      <label for="consent">
+        I agree to receive SMS messages from Weekend Planner about my availability and event planning.
+        Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe.
+      </label>
+    </div>
+
+    <button type="submit">Sign Up</button>
+  </form>
+</body>
+</html>
