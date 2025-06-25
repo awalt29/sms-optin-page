@@ -3,54 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMS Opt-In | Weekend Planner</title>
+  <title>SMS Opt-In Page</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       max-width: 600px;
       margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    form {
+      margin-top: 30px;
       padding: 20px;
-      line-height: 1.5;
+      background: #f4f4f4;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
-    h1 {
-      font-size: 1.8rem;
-      margin-bottom: 0.5em;
-    }
+
     label {
       display: block;
-      margin-top: 1em;
+      margin-bottom: 8px;
+      font-weight: bold;
     }
-    input[type="tel"], button {
-      padding: 10px;
-      font-size: 1rem;
-      margin-top: 8px;
+
+    input[type="text"], input[type="tel"] {
       width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
     }
-    .consent {
-      margin-top: 1em;
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <h1>Sign Up for Weekend Planner Texts</h1>
+  <h1>Event Planner SMS Consent</h1>
+
+  <h2>Privacy Policy</h2>
   <p>
-    Get SMS updates from our Weekend Planner app when your friends are available
-    and it’s time to finalize plans.
+    We collect your name and phone number solely to send you SMS messages related to planning and coordinating group events. This information is used only for communication about the event you are participating in.
+  </p>
+  <p>
+    Your data will <strong>not</strong> be sold or shared with any third parties for marketing or other unrelated purposes.
   </p>
 
+  <h2>Opt-In Form</h2>
   <form>
-    <label for="phone">Enter your mobile number:</label>
-    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
 
-    <div class="consent">
-      <input type="checkbox" id="consent" name="consent" required />
-      <label for="consent">
-        I agree to receive SMS messages from Weekend Planner about my availability and event planning.
-        Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe.
-      </label>
-    </div>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required placeholder="+1 555-555-5555" />
 
-    <button type="submit">Sign Up</button>
+    <label>
+      <input type="checkbox" required />
+      I consent to receive SMS messages regarding event planning.
+    </label>
+
+    <button type="submit">Submit</button>
   </form>
 </body>
 </html>
+
