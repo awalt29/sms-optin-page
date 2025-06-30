@@ -39,6 +39,24 @@
       border-radius: 3px;
     }
 
+    input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .consent {
+      font-size: 0.95em;
+      background-color: #fffbea;
+      border: 1px solid #ffe58f;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
     button {
       background-color: #007bff;
       color: white;
@@ -61,11 +79,12 @@
     We collect your name and phone number solely to send you SMS messages related to planning and coordinating group events. This information is used only for communication about the event you are participating in.
   </p>
   <p>
-    Your data will <strong>not</strong> be sold or shared with any third parties for marketing or other unrelated purposes.
+    Your data will <strong>not</strong> be sold or shared with any third parties for marketing or unrelated purposes.
   </p>
 
-  <p><strong>Message Frequency:</strong> You will only recieve texts when you request a link from the planning page.</p>
+  <p><strong>Message Frequency:</strong> You will receive up to 4 messages per month.</p>
   <p><strong>Message & Data Rates:</strong> Message and data rates may apply.</p>
+  <p><strong>Opt-Out:</strong> Reply STOP to unsubscribe.</p>
 
   <h2>Opt-In Form</h2>
   <form>
@@ -75,10 +94,16 @@
     <label for="phone">Phone Number:</label>
     <input type="tel" id="phone" name="phone" required placeholder="+1 555-555-5555" />
 
-    <label>
-      <input type="checkbox" required />
-      I consent to receive SMS messages regarding event planning.
-    </label>
+    <div class="checkbox-label">
+      <input type="checkbox" id="consent" required />
+      <label for="consent">
+        I consent to receive SMS messages related to event planning.
+      </label>
+    </div>
+
+    <div class="consent">
+      By submitting this form, I consent to receive SMS messages from [Your Business Name] regarding event planning and updates. Message frequency varies. Reply STOP to unsubscribe. Message & Data rates may apply.
+    </div>
 
     <button type="submit">Submit</button>
   </form>
